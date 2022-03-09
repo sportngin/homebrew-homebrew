@@ -4,8 +4,6 @@ class Elasticmq < Formula
   url 'https://s3-eu-west-1.amazonaws.com/softwaremill-public/elasticmq-server-0.14.6.jar', using: :nounzip
   sha256 '1f42a90360ed430f4d46a2481eb4c9b9f849e1655426104c7ea73fc366bde2b2'
 
-  bottle :unneeded
-
   depends_on "openjdk@8"
 
   def install
