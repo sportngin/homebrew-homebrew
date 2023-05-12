@@ -1,4 +1,4 @@
-class MysqlClientAT8032 < Formula
+class MysqlClient < Formula
   desc "Open source relational database management system"
   homepage "https://dev.mysql.com/doc/refman/8.0/en/"
   url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.32.tar.gz"
@@ -7,6 +7,16 @@ class MysqlClientAT8032 < Formula
 
   livecheck do
     formula "mysql"
+  end
+
+  bottle do
+    sha256 arm64_ventura:  "95dfb958dd64fddd166ad43e8be6694b9078a2482131bf8598ce567ddb558c6c"
+    sha256 arm64_monterey: "42ad933ea6281a8753b2f8b5208c69a8a2a15d1515a9826ce5f58c2c941ecbfd"
+    sha256 arm64_big_sur:  "25065dec8c335290a2102d3e33356105ab43ddb150fd0d3ca43df8458e6dde9a"
+    sha256 ventura:        "a774309a32f2487174cc87ef78322bc3a38b210b2a225c158afee78b65ba59a5"
+    sha256 monterey:       "f59757d710beb675217579a01893ea58f6b41cc3b6af22367c34520f1683c695"
+    sha256 big_sur:        "87e9fd2c04fd42dc66382281a8b7ad2ad17a0ce691e4dee8d9e5c7b9eb8af2cd"
+    sha256 x86_64_linux:   "1bacf303dc7b4a7f14c6076466546acb5fd3bd118e20bcb2d9d2f7ee3b5673da"
   end
 
   keg_only "it conflicts with mysql (which contains client libraries)"
