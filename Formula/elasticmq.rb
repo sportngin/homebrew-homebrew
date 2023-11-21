@@ -21,7 +21,7 @@ class Elasticmq < Formula
     bin.install libexec/"bin/elasticmq"
   end
 
-  plist_options :manual => "elasticmq"
+  @plist_manual = "elasticmq"
 
   def plist; <<~EOS
       <?xml version="1.0" encoding="UTF-8"?>
