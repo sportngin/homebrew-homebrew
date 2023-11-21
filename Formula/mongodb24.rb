@@ -77,7 +77,7 @@ class Mongodb24 < Formula
     EOS
   end
 
-  plist_options manual: "mongod --config #{HOMEBREW_PREFIX}/etc/mongod.conf"
+  @plist_manual = "mongod --config #{HOMEBREW_PREFIX}/etc/mongod.conf"
 
   def plist
     <<~EOS
